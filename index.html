@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nástroj pro generování náhodných čísel.">
+    <title>Random Number Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="app-header">
+        <div class="header-content">
+            <div class="logo">
+                <i class="fa-solid fa-cube"></i>
+                <span>Random Number Generator</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="card-header">
+                <h2><i class="fa-solid fa-sliders"></i> Nastavení generátoru</h2>
+            </div>
+            
+            <div class="card-body">
+                <p class="instruction-text">Zadejte požadovaný rozsah pro vygenerování čísla.</p>
+                
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="min">Od (Min)</label>
+                        <div class="input-wrapper">
+                            <input type="number" id="min" placeholder="0" value="1">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="max">Do (Max)</label>
+                        <div class="input-wrapper">
+                            <input type="number" id="max" placeholder="100" value="10">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button id="generateBtn" class="btn-primary">
+                        <span class="btn-text">Generovat</span>
+                        <div class="loader" style="display: none;"></div>
+                    </button>
+                </div>
+
+                <div id="result-container" class="result-container hidden">
+                    <span class="result-label">Výsledek:</span>
+                    <div id="result" class="result-value"></div>
+                    <div class="result-meta">
+                        <span id="timestamp"></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card-footer">
+                <p>Verze systému 2.1.0</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="app-footer">
+        <p>&copy; 2024 Všechna práva vyhrazena.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
